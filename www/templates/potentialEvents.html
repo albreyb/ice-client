@@ -2,12 +2,12 @@
 <ion-view title='Potential Events' hide-back-button="true">
   <ion-content class="has-header">
 
-    <div class='list list-inset'>
+    <div class='list'>
       <a class="item item-icon-right assertive item-thumbnail-left" ng-repeat="event in potentialEvents" ng-click='showEvent(event)'>
-        <img ng-src={{event.logo_url}}>
+        <img ng-src={{event.logo_url}} class="potentialEventsImage">
         <i class="icon ion-fireball"></i>
-        <h2>{{event.name.text}}</h2>
-        <p>{{event.capacity + " people attending"}}</p>
+        <h2 class="potentialEventName">{{event.name.text}}</h2>
+        <p ng-style="{'font-color': 'red'}">{{event.capacity + " people attending"}}</p>
       </a>
     </div>
 

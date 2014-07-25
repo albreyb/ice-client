@@ -30,3 +30,20 @@
     align-items: center;
     background-color: #91CDFF
 }
+
+
+.potentialEventsImage { /*located in potentialEvents.html */
+    vertical-align: middle;
+    height: 100%;
+}
+
+.potentialEventName { 
+    font-family: Rosario;
+    color: #9478E8;
+}
+
+.specificEventAttending {
+    height: 30px;
+    width: 50px;
+
+}

@@ -12,8 +12,8 @@
   <ion-content >
     <div class='list card'>
       <div class="item item-icon-right">
-        <i class='icon ion-fireball'></i>
-        <h2>{{currentEvent.venue.name}}</h2>
+        <i class='icon ion-fireball assertive'></i>
+        <h2 class="potentialEventName">{{currentEvent.venue.name}}</h2>
         <p>{{currentEvent.start.local | calendar}}</p>
       </div>
 
@@ -27,13 +27,13 @@
       </div>
 
       <div class="item tabs tabs-secondary tabs-icon-left">
-        <a class="tab-item" ng-click='guests()'>
-          <i class="icon ion-ios7-people"></i>
-          Attending
-        </a>
-        <a class="tab-item" ng-click='matches()'>
-          <i class="icon ion-heart"></i>
-          Matches
+        <div class="button-bar">
+              <button class="button button-clear button-positive" ng-click="guests()">Attending</button>
+              <button class="button button-clear button-assertive" ng-click="matches()">Matches</button>
+            </div>
+        <!-- <a class="tab-item" ng-click='matches()'> -->
+          <!-- <i class="icon ion-heart"></i> -->
+          <!-- Matches -->
         </a>  
       </div>
     </div>
