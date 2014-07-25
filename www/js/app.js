@@ -56,8 +56,8 @@ app.run(function($ionicPlatform, $rootScope, MatchLoader, Events, $http, $window
   //   console.log(msg.msg)
   // });
 
-  var user = prompt("please enter your name");
-  socket.emit('join', {user: user});
+  // var user = prompt("please enter your name");
+  // socket.emit('join', {user: user});
   $rootScope.currentUser = {};
   $rootScope.currentUser.id = 0;
   $rootScope.currentEvent = {};
@@ -72,7 +72,7 @@ app.run(function($ionicPlatform, $rootScope, MatchLoader, Events, $http, $window
 
   MatchLoader.loadAllMatches().then(function(results) {
     $rootScope.allMatches = results.data;
-    // console.log($rootScope.allMatches);
+    console.log($rootScope.allMatches);
     for (var i = 0; i < results.data.length; i++) {
       if(results.data[i].is_male === 1) {
       results.data[i]['pic'] = 'http://yourgrantauthority.com/wp-content/uploads/2012/09/George_Clooney-0508.jpg';
